@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Crud Task</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="icon" type="image/x-icon" href="/4750856-200.png ">
+
+   <!-- font-awesome -->
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <!-- font family -->
+
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link
+     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200&display=swap"
+     rel="stylesheet"
+   />
+
+  
+</head>
+
+<body>
+
+  <h1 id="work"></h1>
+
+  <h2> Employee Form </h2>
+  <div class ="diameter">
+    <h4> Add Employee </h4>
+    <div class="container">
+      <form id="employeeForm" autocomplete="on">
+
+        <!-- ----- Name ---- -->
+        <div class="row">
+          <div class="col-25">
+            <label for="name">Name *  :</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="name" name="name" placeholder="Your Name.." minlength="4" maxlength="20" >
+            <span class="err-message" id="name-error"></span>
+          </div>
+        </div>
+        <br />
+
+        <!-- ----- Gender ---- -->
+        <div class="row">
+          <div class="col-25">
+            <label>Gender  * :</label>
+          </div>
+          <div class="col-75">
+            <input type="radio" id="male" name="gender" value="Male" checked> Male
+            <input type="radio" id="female" name="gender" value="Female"> Female
+            <span class="err-message" id="gender-error"></span>
+          </div>
+        </div>
+        <br />
+
+        <!-- ----- DOB ---- -->
+        <div class="row">
+          <div class="col-25">
+            <label for="dob">Date of Birth  *  :</label>
+          </div>
+          <div class="col-75">
+            <input type="date" id="dob" name="dob" placeholder="Your birth-date.."
+              onfocus="this.max=new Date().toISOString().split('T')[0]" >
+              <span class="err-message" id="dob-error"></span>
+          </div>
+        </div>
+        <br />
+
+        <!-- ----- Email-ID ---- -->
+        <div class="row">
+          <div class="col-25">
+            <label for="email">Email  * :</label>
+          </div>
+          <div class="col-75">
+            <input type="email" id="email" name="email" placeholder="Your Email.." >
+            <span class="err-message" id="email-error"></span>
+          </div>
+        </div>
+        <br />
+
+        <!-- ----- Phone Number ---- -->
+        <div class="row">
+          <div class="col-25">
+            <label for="phone">Phone Number :</label>
+          </div>
+          <div class="col-75">
+            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number.." pattern="[0-9]{10}"
+              maxlength="10">
+              <span class="err-message" id="phone-error"></span>
+          </div>
+        </div>
+        <br />
+
+        <!-- ----- Hobbies ---- -->
+        <div class="row">
+          <div class="col-25">
+            <label for="hobbies">Hobbies :</label>
+          </div>
+          <div class="col-75">
+            <input type="checkbox" value="Cricket" id="hobby1" class="txtcricket" name="hobby"> Cricket <br />
+            <input type="checkbox" value="Chess" id="hobby2" class="txtchess" name="hobby"> Chess <br />
+            <input type="checkbox" value="Music" id="hobby3" class="txtmusic" name="hobby"> Music <br />
+          </div>
+        </div>
+        <br />
+
+        <!-- ----- Button ---- -->
+        <div class="row" style="margin-left: 24%;">
+          <input type="submit" value="Submit" id="submitButton" onclick="handleEmployee();return false">
+          <input type="button" value="Cancel" id="cancelButton" style="display: none;">
+      </div>
+
+      </form>
+    </div>
+  </div>
+  <br />
+
+  <!-- ----- Basic Table ---- -->
+  <h2> Display </h2>
+  <div class ="diameter">
+    <h4> Display </h4>
+    <div class="container">
+      <table id="employeeTable" border="1">
+        <tr>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Date of Birth</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Hobbies</th>
+          <th>Action</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <br />
+
+  <!-- <h2> Advanced </h2> -->
+  <div class ="diameter" style="display: none;">
+    <h4> Display </h4>
+    <div class="container">
+      <table id="advancedTable" border="1">
+        <tr id="nameField">
+          <th>Name</th>
+        </tr>
+        <tr id="genderField">
+          <th>Gender</th>
+        </tr>
+        <tr id="DOBField">
+          <th>DOB</th>
+        </tr>
+        <tr id="EmailField">
+          <th>Email</th>
+        </tr>
+        <tr id="PhoneField">
+          <th>Phone</th>
+        </tr>
+        <tr id="HobbyField">
+          <th>Hobbies</th>
+        </tr>
+        <tr id="ActionField">
+          <th>Action</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="validation.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>

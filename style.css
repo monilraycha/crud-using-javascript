@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  font-family: poppins;
+}
+
+body{
+  background-image: url('./pexels-jess-bailey-designs-743986.jpg');
+  background-size: cover;
+}
+
+.diameter {
+  border: 1px solid #005cb9;
+  border-radius: 5px;
+}
+
+.err-message{
+  color: red;
+}
+
+h4 {
+  background-color: #005cb9;
+  color: #fff;
+  padding: 5px;
+  margin-top: 0;
+}
+
+h2 {
+  text-align: center;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #140c0c;
+  border-radius: 4px;
+  outline: none;
+  background-color: transparent;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-weight: bold;
+}
+
+input[type=submit] {
+  background-color: #005cb9;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=button] {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=button]:hover {
+  background-color: black;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  overflow: auto;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.table-container {
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+
+#table-row {
+  margin-top: 30px;
+}
+
+table,
+th,
+td {
+  border: 1px solid #161111;
+  padding: 10px;
+  text-align: center;
+}
+
